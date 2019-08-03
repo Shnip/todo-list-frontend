@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Signin from "@/components/auth/Signin";
 import Signup from "@/components/auth/Signup";
+import Todos from "@/components/todos/Todos";
 
 Vue.use(Router);
 
@@ -35,6 +36,12 @@ export default new Router({
       name: "Signup",
       component: Signup,
       beforeEnter: ifAuthenticated
+    },
+    {
+      path: "/todos",
+      name: "Todos",
+      component: Todos,
+      beforeEnter: ifNotAuthenticated
     }
   ]
 });

@@ -95,7 +95,6 @@ export default {
       this.$router.replace("/todos");
     },
     signupFailed(error) {
-      debugger;
       this.errors =
         (error.response && error.response.data && error.response.data.errors) ||
         "Something went wrong";
